@@ -31,6 +31,15 @@ module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>
   // for more about customizing your Truffle configuration!
   networks: {
+    testnet: {
+      provider: () => new HDWalletProvider(
+        mnemonic,
+        'https://public-node.testnet.rsk.co/1.3.0/',
+      ),
+      network_id: 31,
+      gasPrice: gasPriceTestnet + 1e6,
+      networkCheckTimeout: 1e9,
+    },
     development: {
       host: "127.0.0.1",
       port: 7545,
