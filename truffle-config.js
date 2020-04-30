@@ -40,6 +40,13 @@ module.exports = {
       gasPrice: gasPriceTestnet + 1e6,
       networkCheckTimeout: 1e9,
     },
+    regtest: {
+      host: '127.0.0.1',
+      port: 4444,
+      network_id: 33,
+      gasPrice: gasPriceRegtest,
+      networkCheckTimeout: 1e3,
+    },
     development: {
       host: "127.0.0.1",
       port: 7545,
